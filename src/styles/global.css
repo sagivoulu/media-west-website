@@ -53,7 +53,6 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 
 .skip { position: absolute; inset-inline-start: 8px; top: -60px; background: var(--ink); color: var(--bg); padding: 8px 12px; z-index: 10; }
 .skip:focus { top: 8px; color: var(--bg); }
-.preview { margin: 0; padding: 6px var(--gutter); text-align: center; font-size: var(--t-label); letter-spacing: .04em; color: var(--muted); border-bottom: 1px solid var(--rule); }
 
 .label { font-size: var(--t-label); font-weight: 400; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 :root[lang="he"] .label { letter-spacing: .06em; }

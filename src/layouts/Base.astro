@@ -43,7 +43,6 @@ const otherUrl = page === '404' ? pageUrl('home', other) : pageUrl(page, other);
   </head>
   <body>
     <a class="skip" href="#main">{lang === 'he' ? 'דילוג לתוכן' : 'Skip to content'}</a>
-    {site.preview && <p class="preview">{t(texts.common.preview, lang)}</p>}
     <header class="wrap">
       <div class="bar">
         <a class="name" href={pageUrl('home', lang)}>Media West</a>

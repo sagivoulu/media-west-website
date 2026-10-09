@@ -17,7 +17,6 @@ common:
   party: { he: "מסיבה", en: "Party" }
   soon: { he: "בקרוב", en: "Coming soon" }
   example: { he: "דוגמה", en: "Example" }
-  preview: { he: "גרסת תצוגה מקדימה - חלק מהתוכן זמני", en: "Preview version - some content is temporary" }
   switch_lang: { he: "English", en: "עברית" }
   theme_dark: { he: "כהה", en: "Dark" }
   theme_light: { he: "בהיר", en: "Light" }
