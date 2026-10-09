@@ -39,7 +39,7 @@ Pages: Home, Music, Staff, Gallery, About, Location, Updates (the menu is always
 | Hosting later | Cloudflare (free plan, custom domain, Cloudflare Web Analytics) - not set up yet. |
 | Content updates | Pull requests: people editing through Claude Code, and scheduled routines if any are added later. |
 
-Date-based content (banners, the "new address" tag) is filtered at build time **and** re-checked in the browser on load (inline script in `src/layouts/Base.astro`), so it stays correct between builds.
+Date-based content (banners) is filtered at build time **and** re-checked in the browser on load (inline script in `src/layouts/Base.astro`), so it stays correct between builds.
 
 ## Editing content
 

@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import LinkRow from '../../components/LinkRow.astro';
 import Icon from '../../components/Icon.astro';
-import { site, texts, t, langPaths, langOf, todayIL } from '../../lib/content';
+import { site, texts, t, langPaths, langOf } from '../../lib/content';
 
 export const getStaticPaths = langPaths;
 const lang = langOf(Astro.params.lang);
@@ -14,7 +14,6 @@ const ext = { target: '_blank', rel: 'noopener' };
   <div class="page grid">
     <div class="head">
       <h1>{t(T.title, lang)}</h1>
-      {site.address.new_until >= todayIL() && <p class="new" data-until={site.address.new_until}>{t(T.new_since, lang)}</p>}
     </div>
     <div class="stack">
       <section class="block">

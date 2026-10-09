@@ -16,8 +16,6 @@ address:
   he: "ז'בוטינסקי 53, רמת גן"
   en: "Jabotinsky St 53, Ramat Gan"
   short_en: "Jabotinsky 53, Ramat Gan"
-  # We moved here in September 2026. Until this date the address is marked "new address".
-  new_until: "2026-12-31"
   waze: "https://waze.com/ul?q=Jabotinsky%2053%20Ramat%20Gan&navigate=yes"
   google_maps: "https://www.google.com/maps/search/?api=1&query=Jabotinsky+St+53+Ramat+Gan"
 
