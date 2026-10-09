@@ -38,9 +38,7 @@ home:
 music:
   title: { he: "מוזיקה", en: "Music" }
   lead: { he: "פופ, R&B, בלוז ועוד - כל שבוע DJ אחר מהקהילה.", en: "Pop, R&B, blues and more - a different DJ from the community every week." }
-  upcoming: { he: "ה-DJs בימי ראשון הקרובים", en: "DJs on the coming Sundays" }
-  none_upcoming: { he: "השיבוצים הבאים יתפרסמו בקרוב.", en: "The next DJs will be announced soon." }
-  playlists: { he: "פלייליסטים", en: "Playlists" }
+  sets: { he: "סטים מערבים קודמים", en: "Sets from past socials" }
 
 staff:
   title: { he: "הצוות", en: "Staff" }
@@ -73,7 +71,7 @@ location:
 updates:
   title: { he: "עדכונים", en: "Updates" }
   lead: { he: "מי מלמד, מי ה-DJ וערבי נושא - כל שבוע ברשתות שלנו.", en: "Who's teaching, who's DJ-ing and theme nights - every week on our channels." }
-  whatsapp: { he: "קבוצת העדכונים", en: "Updates group" }
+  whatsapp: { he: "עדכונים שקטים בווצאפ", en: "Silent WhatsApp group - updates only" }
   instagram: { he: "הסטורי השבועי ותמונות", en: "The weekly story and photos" }
   facebook: { he: "העמוד של מדיה ווסט", en: "The Media West page" }
 

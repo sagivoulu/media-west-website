@@ -127,7 +127,7 @@ a.row:hover .v, a.row:hover .x { color: var(--accent); }
 .people { display: grid; gap: 28px 18px; grid-template-columns: repeat(2, 1fr); }
 @media (min-width: 620px) { .people { grid-template-columns: repeat(4, 1fr); } }
 .person { display: grid; gap: 8px; align-content: start; }
-.portrait { aspect-ratio: 4 / 5; width: 100%; background: var(--frame); border: 1px solid var(--rule); object-fit: cover; }
+.portrait { aspect-ratio: 4 / 5; width: 100%; height: auto; background: var(--frame); border: 1px solid var(--rule); object-fit: cover; }
 .person b { font-weight: 400; }
 
 /* gallery */

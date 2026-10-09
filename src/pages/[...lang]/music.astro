@@ -1,12 +1,14 @@
 ---
 import Base from '../../layouts/Base.astro';
-import LinkRow from '../../components/LinkRow.astro';
-import { site, texts, djSchedule, playlists, t, langPaths, langOf, shortDate, todayIL } from '../../lib/content';
+import { texts, djSets, t, langPaths, langOf, shortDate } from '../../lib/content';
 
 export const getStaticPaths = langPaths;
 const lang = langOf(Astro.params.lang);
 const T = texts.music;
-const upcoming = djSchedule.filter((d) => d.date >= todayIL()).sort((a, b) => a.date.localeCompare(b.date));
+// Newest first; sets without a date go last.
+const sets = [...djSets].sort((a, b) => (b.date || '0').localeCompare(a.date || '0'));
+const when = (d: string) => (d ? `${shortDate(d, lang)}${lang === 'he' ? '.' : ' '}${d.slice(0, 4)}` : '');
+const service = (url: string) => (/spotify\.com/.test(url) ? 'Spotify' : /youtube|youtu\.be/.test(url) ? 'YouTube' : /soundcloud/.test(url) ? 'SoundCloud' : '');
 ---
 <Base lang={lang} page="music" title={t(T.title, lang)} description={t(T.lead, lang)}>
   <div class="page grid">
@@ -14,26 +16,17 @@ const upcoming = djSchedule.filter((d) => d.date >= todayIL()).sort((a, b) => a.
       <h1>{t(T.title, lang)}</h1>
       <p class="lead">{t(T.lead, lang)}</p>
     </div>
-    <div class="stack">
-      <section class="block" aria-labelledby="dj-h">
-        <h2 class="label" id="dj-h">{t(T.upcoming, lang)}</h2>
-        <div class="rows" id="dj-list">
-          {upcoming.map((d) => (
-            <div class="row" data-until={d.date}>
-              <span class="k">{shortDate(d.date, lang)}</span>
-              <span class="v">{d.dj}{d.placeholder && <span class="tag">{t(texts.common.example, lang)}</span>}</span>
-              <span class="x">{t(texts.common.party, lang)} {site.schedule.party}</span>
-            </div>
-          ))}
-        </div>
-        <p class="muted" data-empty-for="dj-list" hidden={upcoming.length > 0}>{t(T.none_upcoming, lang)}</p>
-      </section>
-      <section class="block" aria-labelledby="pl-h">
-        <h2 class="label" id="pl-h">{t(T.playlists, lang)}</h2>
-        <div class="rows lg">
-          {playlists.map((p) => <LinkRow lang={lang} k={p.service} v={t(p, lang)} url={p.url} />)}
-        </div>
-      </section>
-    </div>
+    <section class="block" aria-labelledby="sets-h">
+      <h2 class="label" id="sets-h">{t(T.sets, lang)}</h2>
+      <div class="rows lg">
+        {sets.map((s) => (
+          <a class="row" href={s.url} target="_blank" rel="noopener">
+            <span class="k">{when(s.date)}</span>
+            <span class="v">{s.dj}</span>
+            <span class="x">{service(s.url)}<span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+        ))}
+      </div>
+    </section>
   </div>
 </Base>

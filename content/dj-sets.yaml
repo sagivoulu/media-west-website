@@ -1,0 +1,6 @@
+# Sets from past socials, shown on the Music page (newest first by date).
+# date: the Sunday of the social, YYYY-MM-DD - leave "" if not known yet (shown without a date, at the end)
+# url: the playlist of the set (Spotify or similar). The Spotify playlist title usually has the date.
+- { date: "", dj: "DJ Sagbot", url: "https://open.spotify.com/playlist/2MxpAEPycPpI8lpAQ5TGs6" }
+- { date: "", dj: "DJ Sagbot", url: "https://open.spotify.com/playlist/4WyfED9HJhTg3B7T7fjrSF" }
+- { date: "", dj: "DJ Sagbot", url: "https://open.spotify.com/playlist/5rBqcQ8GoLIw74Yq9XyzCu" }
