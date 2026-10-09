@@ -15,7 +15,7 @@ export const site = YAML.parse(siteRaw);
 export const texts = YAML.parse(textsRaw);
 export const questions: { q: Bi; a: Bi; link?: { url_key: string } & Bi }[] = YAML.parse(questionsRaw) ?? [];
 export const staff: { teachers: (Bi & { photo?: string })[]; djs: { name: string; photo?: string }[] } = YAML.parse(staffRaw);
-export const djSets: { date: string; dj: string; url: string }[] = YAML.parse(djSetsRaw) ?? [];
+export const djSets: { date: string; dj: string; url: string; title?: Bi }[] = YAML.parse(djSetsRaw) ?? [];
 export const gallery: (Bi & { date: string; image?: string })[] = YAML.parse(galleryRaw) ?? [];
 export const banners: (Bi & { from: string; to: string; link?: string })[] = YAML.parse(bannersRaw) ?? [];
 

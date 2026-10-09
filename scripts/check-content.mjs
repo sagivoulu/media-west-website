@@ -67,6 +67,7 @@ if (staff) {
   if (d.date && !isDate(d.date)) errors.push(`dj-sets.yaml #${i + 1}: date "${d.date}" must be YYYY-MM-DD or ""`);
   if (!d.dj) errors.push(`dj-sets.yaml #${i + 1}: missing dj`);
   if (!d.url || !isUrl(d.url)) errors.push(`dj-sets.yaml #${i + 1}: url must be an https:// link to the playlist`);
+  if (d.title) bi(d.title, `dj-sets.yaml #${i + 1} title`);
 });
 
 (load('gallery.yaml') ?? []).forEach((g, i) => {

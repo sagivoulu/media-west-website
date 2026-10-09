@@ -59,6 +59,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 :root[lang="he"] .label { letter-spacing: .06em; }
 .tag { display: inline-block; margin-inline-start: 8px; padding: 1px 6px; border: 1px dashed var(--muted); border-radius: 4px; font-size: .6875rem; font-weight: 400; letter-spacing: .04em; color: var(--muted); vertical-align: middle; line-height: 1.6; }
 .arrow { display: inline-block; margin-inline-start: 6px; }
+.icon { width: 1.15em; height: 1.15em; flex: none; fill: var(--brand); }
+.with-icon { display: inline-flex; align-items: center; gap: 8px; }
 :root[dir="rtl"] .arrow { transform: scaleX(-1); }
 .muted { color: var(--muted); }
 .ltr { direction: ltr; unicode-bidi: isolate; white-space: nowrap; }

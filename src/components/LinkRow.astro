@@ -1,16 +1,17 @@
 ---
-// A listing row that links out, or shows "coming soon" when the link isn't known yet.
+// A listing row that links out, or shows "coming soon" when the link isn't known yet. `icon` adds a brand icon before the label.
+import Icon from './Icon.astro';
 import { texts, t, type Lang } from '../lib/content';
-interface Props { lang: Lang; k: string; v: string; url?: string }
-const { lang, k, v, url } = Astro.props;
+interface Props { lang: Lang; k: string; v: string; url?: string; icon?: string }
+const { lang, k, v, url, icon } = Astro.props;
 const external = url && /^https?:/.test(url);
 ---
 {url ? (
   <a class="row" href={url} {...(external ? { target: '_blank', rel: 'noopener' } : {})}>
-    <span class="k">{k}</span><span class="v">{v}</span><span class="x arrow" aria-hidden="true">→</span>
+    <span class="k with-icon">{icon && <Icon name={icon} />}{k}</span><span class="v">{v}</span><span class="x arrow" aria-hidden="true">→</span>
   </a>
 ) : (
   <div class="row soon">
-    <span class="k">{k}</span><span class="v">{v}</span><span class="x">{t(texts.common.soon, lang)}</span>
+    <span class="k with-icon">{icon && <Icon name={icon} />}{k}</span><span class="v">{v}</span><span class="x">{t(texts.common.soon, lang)}</span>
   </div>
 )}

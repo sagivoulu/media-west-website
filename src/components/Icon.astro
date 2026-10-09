@@ -1,0 +1,23 @@
+---
+// A brand icon (inline SVG, brand color) from simple-icons (CC0). Decorative: the link text next to it says what it is.
+import { siWhatsapp, siFacebook, siInstagram, siWaze, siGooglemaps, siMessenger, siSpotify } from 'simple-icons';
+
+const icons = {
+  whatsapp: siWhatsapp,
+  facebook: siFacebook,
+  instagram: siInstagram,
+  waze: siWaze,
+  googlemaps: siGooglemaps,
+  messenger: siMessenger,
+  spotify: siSpotify,
+} as const;
+export type IconName = keyof typeof icons;
+
+interface Props { name: IconName | string }
+const icon = (icons as Record<string, { path: string; hex: string }>)[Astro.props.name];
+---
+{icon && (
+  <svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" style={`--brand:#${icon.hex}`}>
+    <path d={icon.path} />
+  </svg>
+)}
