@@ -22,6 +22,11 @@ common:
   theme_light: { he: "בהיר", en: "Light" }
   tagline: { he: "קהילת West Coast Swing בהתנדבות", en: "A volunteer-run West Coast Swing community" }
 
+footer:
+  contact: { he: "ליצירת קשר - הכי נוח בהודעה לעמוד הפייסבוק שלנו", en: "To reach us - a message to our Facebook page works best" }
+  messenger: { he: "שליחת הודעה", en: "Send a message" }
+  whatsapp: { he: "קבוצת עדכונים שקטה", en: "silent updates group" }
+
 home:
   title: { he: "מדיה ווסט - West Coast Swing ברמת גן", en: "Media West - West Coast Swing in Ramat Gan" }
   description: { he: "West Coast Swing כל יום ראשון ברמת גן. שיעורים 20:30, מסיבה 21:40.", en: "West Coast Swing every Sunday in Ramat Gan. Classes 20:30, party 21:40." }
@@ -62,7 +67,7 @@ location:
   title: { he: "איך מגיעים", en: "Location" }
   copy: { he: "העתקת הכתובת", en: "Copy address" }
   copied: { he: "הכתובת הועתקה", en: "Address copied" }
-  contact: { he: "צור קשר", en: "Contact" }
+  contact: { he: "יצירת קשר", en: "Contact" }
   message_team: { he: "שליחת הודעה לעמוד של מדיה ווסט", en: "Message the Media West page" }
 
 updates:

@@ -77,7 +77,12 @@ header { padding-block: 22px 0; }
 @media (max-width: 480px) { .menu { gap: 6px 18px; font-size: .875rem; } }
 
 footer { padding-block: 24px 40px; font-size: .8125rem; color: var(--muted); }
-.foot { border-top: 1px solid var(--rule); padding-top: 24px; }
+.foot { border-top: 1px solid var(--rule); padding-top: 24px; display: grid; gap: 10px; }
+.foot-links { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 20px; }
+.foot-links a { color: var(--ink); }
+.foot-links a:hover { color: var(--accent); }
+.foot .icon { width: 1.05em; height: 1.05em; }
+.foot .with-icon { gap: 6px; }
 
 /* pages */
 .page { padding-block: 56px 72px; }
