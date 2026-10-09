@@ -1,0 +1,31 @@
+# Facts about Media West and the links used across the site.
+# Everything here is PUBLIC. Never add phone numbers, emails or internal links.
+#
+# A link left empty ("") shows on the site as "coming soon" instead of a link.
+
+# While true, the site shows a thin "preview" strip and asks search engines not to index it.
+preview: true
+
+schedule:
+  day: { he: "כל יום ראשון", en: "Every Sunday" }
+  classes: "20:30"
+  party: "21:40"
+  end: "00:00"
+
+address:
+  he: "ז'בוטינסקי 53, רמת גן"
+  en: "Jabotinsky St 53, Ramat Gan"
+  short_en: "Jabotinsky 53, Ramat Gan"
+  # We moved here in September 2026. Until this date the address is marked "new address".
+  new_until: "2026-12-31"
+  waze: "https://waze.com/ul?q=Jabotinsky%2053%20Ramat%20Gan&navigate=yes"
+  google_maps: "https://www.google.com/maps/search/?api=1&query=Jabotinsky+St+53+Ramat+Gan"
+
+links:
+  whatsapp_group: ""      # invite link to the public updates group (מדיה ווסט - הודעות, עדכונים)
+  whatsapp_contact: ""    # how people message the team
+  instagram: ""
+  facebook: ""
+  paybox: ""
+  bit: ""
+  birthday_form: "https://docs.google.com/forms/d/e/1FAIpQLScw7zQGsQnD4GdETS8522dYe-4vRcMp2yh31xHEpd9_PrpLDg/viewform"

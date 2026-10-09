@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import { texts, staff, t, asset, langPaths, langOf } from '../../lib/content';
+
+export const getStaticPaths = langPaths;
+const lang = langOf(Astro.params.lang);
+const T = texts.staff;
+const people = [
+  { id: 'teachers', title: t(T.teachers, lang), list: staff.teachers.map((p) => ({ name: t(p, lang), photo: p.photo })) },
+  { id: 'djs', title: t(T.djs, lang), list: staff.djs.map((p) => ({ name: p.name, photo: p.photo })) },
+];
+---
+<Base lang={lang} page="staff" title={t(T.title, lang)} description={t(T.lead, lang)}>
+  <div class="page grid">
+    <div class="head">
+      <h1>{t(T.title, lang)}</h1>
+      <p class="lead">{t(T.lead, lang)}</p>
+    </div>
+    <div class="stack">
+      {people.map((g) => (
+        <section class="block" aria-labelledby={`${g.id}-h`}>
+          <h2 class="label" id={`${g.id}-h`}>{g.title}</h2>
+          <div class="people">
+            {g.list.map((p) => (
+              <div class="person">
+                {p.photo
+                  ? <img class="portrait" src={asset(`images/staff/${p.photo}`)} alt={p.name} loading="lazy" width="400" height="500" />
+                  : <div class="portrait" aria-hidden="true"></div>}
+                <b>{p.name}</b>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </div>
+</Base>

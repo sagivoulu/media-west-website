@@ -1,0 +1,51 @@
+---
+import Base from '../../layouts/Base.astro';
+import LinkRow from '../../components/LinkRow.astro';
+import { site, texts, t, langPaths, langOf, todayIL } from '../../lib/content';
+
+export const getStaticPaths = langPaths;
+const lang = langOf(Astro.params.lang);
+const T = texts.location;
+const addr = lang === 'he' ? site.address.he : site.address.en;
+const ext = { target: '_blank', rel: 'noopener' };
+---
+<Base lang={lang} page="location" title={t(T.title, lang)} description={`${addr} · ${t(site.schedule.day, lang)}`}>
+  <div class="page grid">
+    <div class="head">
+      <h1>{t(T.title, lang)}</h1>
+      {site.address.new_until >= todayIL() && <p class="new" data-until={site.address.new_until}>{t(T.new_since, lang)}</p>}
+    </div>
+    <div class="stack">
+      <section class="block">
+        <p class="addr" id="addr">{addr}</p>
+        <p class="muted">
+          {t(site.schedule.day, lang)} · {t(texts.common.classes, lang)} {site.schedule.classes} · {t(texts.common.party, lang)} <span class="ltr">{site.schedule.party} - {site.schedule.end}</span>
+        </p>
+        <div class="links">
+          <a href={site.address.waze} {...ext}>Waze<span class="arrow" aria-hidden="true">→</span></a>
+          <a href={site.address.google_maps} {...ext}>Google Maps<span class="arrow" aria-hidden="true">→</span></a>
+          <button type="button" id="copy" data-text={addr} data-done={t(T.copied, lang)}>{t(T.copy, lang)}</button>
+        </div>
+      </section>
+      <section class="block" aria-labelledby="c-h">
+        <h2 class="label" id="c-h">{t(T.contact, lang)}</h2>
+        <div class="rows lg">
+          <LinkRow lang={lang} k="WhatsApp" v={t(T.message_team, lang)} url={site.links.whatsapp_contact} />
+        </div>
+      </section>
+    </div>
+  </div>
+  <p class="toast" id="toast" role="status" hidden></p>
+  <script is:inline>
+    (function () {
+      var btn = document.getElementById('copy'), toast = document.getElementById('toast'), timer;
+      function show(msg) { toast.textContent = msg; toast.hidden = false; clearTimeout(timer); timer = setTimeout(function () { toast.hidden = true; }, 2200); }
+      function select() { var r = document.createRange(); r.selectNodeContents(document.getElementById('addr')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+      btn.addEventListener('click', function () {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(btn.dataset.text).then(function () { show(btn.dataset.done); }, select);
+        } else { select(); }
+      });
+    })();
+  </script>
+</Base>

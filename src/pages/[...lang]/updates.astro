@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import LinkRow from '../../components/LinkRow.astro';
+import { site, texts, t, langPaths, langOf } from '../../lib/content';
+
+export const getStaticPaths = langPaths;
+const lang = langOf(Astro.params.lang);
+const T = texts.updates;
+---
+<Base lang={lang} page="updates" title={t(T.title, lang)} description={t(T.lead, lang)}>
+  <div class="page grid">
+    <div class="head">
+      <h1>{t(T.title, lang)}</h1>
+      <p class="lead">{t(T.lead, lang)}</p>
+    </div>
+    <div class="rows lg">
+      <LinkRow lang={lang} k="WhatsApp" v={t(T.whatsapp, lang)} url={site.links.whatsapp_group} />
+      <LinkRow lang={lang} k="Instagram" v={t(T.instagram, lang)} url={site.links.instagram} />
+      <LinkRow lang={lang} k="Facebook" v={t(T.facebook, lang)} url={site.links.facebook} />
+    </div>
+  </div>
+</Base>

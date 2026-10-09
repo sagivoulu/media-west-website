@@ -1,0 +1,96 @@
+---
+// The frame of every page: <head>, header with the always-visible menu, footer.
+import '../styles/global.css';
+import { site, texts, t, PAGES, pageUrl, asset, type Lang, type Page } from '../lib/content';
+
+interface Props { lang: Lang; page: Page; title?: string; description?: string }
+const { lang, page, title, description } = Astro.props;
+const other: Lang = lang === 'he' ? 'en' : 'he';
+const fullTitle = page === 'home' ? t(texts.home.title, lang) : `${title} · Media West`;
+const desc = description ?? t(texts.home.description, lang);
+const canonical = new URL(pageUrl(page, lang), Astro.site).href;
+const otherUrl = page === '404' ? pageUrl('home', other) : pageUrl(page, other);
+---
+<!doctype html>
+<html lang={lang} dir={lang === 'he' ? 'rtl' : 'ltr'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={desc} />
+    {site.preview && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="canonical" href={canonical} />
+    {page !== '404' && PAGES.includes(page as any) && (
+      <>
+        <link rel="alternate" hreflang="he" href={new URL(pageUrl(page, 'he'), Astro.site).href} />
+        <link rel="alternate" hreflang="en" href={new URL(pageUrl(page, 'en'), Astro.site).href} />
+      </>
+    )}
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:image" content={new URL(asset('images/logo-round.png'), Astro.site).href} />
+    <meta property="og:locale" content={lang === 'he' ? 'he_IL' : 'en_US'} />
+    <meta name="theme-color" content="#FEFBF4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0D0E2B" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href={asset('favicon.svg')} type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500&display=swap" />
+    <script is:inline>
+      // Apply a saved theme before the first paint, so there is no flash.
+      try { var s = localStorage.getItem('mw-theme'); if (s === 'dark' || s === 'light') document.documentElement.setAttribute('data-theme', s); } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">{lang === 'he' ? 'דילוג לתוכן' : 'Skip to content'}</a>
+    {site.preview && <p class="preview">{t(texts.common.preview, lang)}</p>}
+    <header class="wrap">
+      <div class="bar">
+        <a class="name" href={pageUrl('home', lang)}>Media West</a>
+        <div class="switch">
+          <a href={otherUrl} hreflang={other} lang={other}>{t(texts.common.switch_lang, lang)}</a>
+          <button id="theme" type="button" data-dark={t(texts.common.theme_dark, lang)} data-light={t(texts.common.theme_light, lang)}>{t(texts.common.theme_dark, lang)}</button>
+        </div>
+        <nav class="menu" aria-label={lang === 'he' ? 'עמודים' : 'Pages'}>
+          {PAGES.map((p) => (
+            <a href={pageUrl(p, lang)} aria-current={p === page ? 'page' : undefined}>{t(texts.nav[p], lang)}</a>
+          ))}
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="wrap">
+      <slot />
+    </main>
+    <footer class="wrap">
+      <p class="foot">Media West · {t(texts.common.tagline, lang)}</p>
+    </footer>
+    <script is:inline>
+      // Theme toggle: system theme by default, the visitor's choice is remembered.
+      (function () {
+        var root = document.documentElement, btn = document.getElementById('theme');
+        var mq = window.matchMedia('(prefers-color-scheme: dark)');
+        function current() { return root.getAttribute('data-theme') || (mq.matches ? 'dark' : 'light'); }
+        function label() { btn.textContent = current() === 'dark' ? btn.dataset.light : btn.dataset.dark; }
+        btn.addEventListener('click', function () {
+          var next = current() === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem('mw-theme', next); } catch (e) {}
+          label();
+        });
+        if (mq.addEventListener) mq.addEventListener('change', label);
+        label();
+      })();
+      // Dated content: hide what has passed or hasn't started (the build may be days old).
+      (function () {
+        var today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Jerusalem' }).format(new Date());
+        document.querySelectorAll('[data-until]').forEach(function (el) { if (el.dataset.until < today) el.hidden = true; });
+        document.querySelectorAll('[data-from]').forEach(function (el) { if (el.dataset.from > today) el.hidden = true; });
+        document.querySelectorAll('[data-empty-for]').forEach(function (msg) {
+          var list = document.getElementById(msg.dataset.emptyFor);
+          var any = list && Array.prototype.some.call(list.children, function (c) { return !c.hidden; });
+          msg.hidden = !!any;
+        });
+      })();
+    </script>
+  </body>
+</html>

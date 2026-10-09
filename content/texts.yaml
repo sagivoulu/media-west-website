@@ -1,0 +1,82 @@
+# The copy of every page, in Hebrew (he) and English (en).
+# Hebrew addresses people gender-neutrally ("נשמח", "למלא", or both forms).
+# Say "West Coast Swing" / "WCS" / "West" - never just "swing". Say "classes", never "lessons".
+# Items marked `placeholder: true` show a small "example" tag on the site until replaced.
+
+nav:
+  home: { he: "בית", en: "Home" }
+  music: { he: "מוזיקה", en: "Music" }
+  staff: { he: "הצוות", en: "Staff" }
+  gallery: { he: "גלריה", en: "Gallery" }
+  about: { he: "עלינו", en: "About" }
+  location: { he: "איך מגיעים", en: "Location" }
+  updates: { he: "עדכונים", en: "Updates" }
+
+common:
+  classes: { he: "שיעורים", en: "Classes" }
+  party: { he: "מסיבה", en: "Party" }
+  new_address: { he: "כתובת חדשה", en: "New address" }
+  soon: { he: "בקרוב", en: "Coming soon" }
+  example: { he: "דוגמה", en: "Example" }
+  preview: { he: "גרסת תצוגה מקדימה - חלק מהתוכן זמני", en: "Preview version - some content is temporary" }
+  switch_lang: { he: "English", en: "עברית" }
+  theme_dark: { he: "כהה", en: "Dark" }
+  theme_light: { he: "בהיר", en: "Light" }
+  tagline: { he: "קהילת West Coast Swing בהתנדבות", en: "A volunteer-run West Coast Swing community" }
+
+home:
+  title: { he: "מדיה ווסט - West Coast Swing ברמת גן", en: "Media West - West Coast Swing in Ramat Gan" }
+  description: { he: "West Coast Swing כל יום ראשון ברמת גן. שיעורים 20:30, מסיבה 21:40.", en: "West Coast Swing every Sunday in Ramat Gan. Classes 20:30, party 21:40." }
+  promise:
+    - { he: "בלי צורך בבן או בת זוג", en: "No partner needed" }
+    - { he: "בלי הרשמה", en: "No registration" }
+    - { he: "פשוט באים", en: "Just show up" }
+  entry:
+    - { he: "כניסה חופשית", en: "Free entry" }
+    - { he: "על בסיס תרומה", en: "Donation based" }
+
+music:
+  title: { he: "מוזיקה", en: "Music" }
+  lead: { he: "פופ, R&B, בלוז ועוד - כל שבוע DJ אחר מהקהילה.", en: "Pop, R&B, blues and more - a different DJ from the community every week." }
+  upcoming: { he: "ה-DJs בימי ראשון הקרובים", en: "DJs on the coming Sundays" }
+  none_upcoming: { he: "השיבוצים הבאים יתפרסמו בקרוב.", en: "The next DJs will be announced soon." }
+  playlists: { he: "פלייליסטים", en: "Playlists" }
+
+staff:
+  title: { he: "הצוות", en: "Staff" }
+  lead: { he: "המדריכים וה-DJs, כולם מתנדבים.", en: "Our teachers and DJs, all volunteers." }
+  teachers: { he: "מדריכים", en: "Teachers" }
+  djs: { he: "DJs", en: "DJs" }
+
+gallery:
+  title: { he: "גלריה", en: "Gallery" }
+
+about:
+  title: { he: "עלינו", en: "About" }
+  lead: { he: "קהילת West Coast Swing שמתנהלת בהתנדבות ונפגשת כל יום ראשון ברמת גן.", en: "A volunteer-run West Coast Swing community that meets every Sunday in Ramat Gan." }
+  spirit:
+    he: "ערב שמתחיל בשיעור ונגמר ברחבה. מי שבא פעם ראשונה רוקד עם מי שרוקד שנים."
+    en: "An evening that starts with a class and ends on the dance floor. First-timers dance with people who've danced for years."
+    placeholder: true
+  donations: { he: "תרומות", en: "Donations" }
+  donations_text: { he: "הכניסה חופשית, על בסיס תרומה.", en: "Entry is free, donation based." }
+  questions: { he: "שאלות", en: "Questions" }
+
+location:
+  title: { he: "איך מגיעים", en: "Location" }
+  new_since: { he: "כתובת חדשה מספטמבר 2026", en: "New address since September 2026" }
+  copy: { he: "העתקת הכתובת", en: "Copy address" }
+  copied: { he: "הכתובת הועתקה", en: "Address copied" }
+  contact: { he: "צור קשר", en: "Contact" }
+  message_team: { he: "הודעה לצוות", en: "Message the team" }
+
+updates:
+  title: { he: "עדכונים", en: "Updates" }
+  lead: { he: "מי מלמד, מי ה-DJ וערבי נושא - כל שבוע ברשתות שלנו.", en: "Who's teaching, who's DJ-ing and theme nights - every week on our channels." }
+  whatsapp: { he: "קבוצת העדכונים", en: "Updates group" }
+  instagram: { he: "הסטורי השבועי ותמונות", en: "The weekly story and photos" }
+  facebook: { he: "העמוד של מדיה ווסט", en: "The Media West page" }
+
+not_found:
+  title: { he: "העמוד לא נמצא", en: "Page not found" }
+  back: { he: "חזרה לדף הבית", en: "Back to the home page" }

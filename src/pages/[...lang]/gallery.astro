@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+import { texts, gallery, t, asset, langPaths, langOf, shortDate } from '../../lib/content';
+
+export const getStaticPaths = langPaths;
+const lang = langOf(Astro.params.lang);
+const T = texts.gallery;
+// "2026-09-06" -> "6.9.2026" / "6 Sep 2026"; anything else (e.g. "2026") is shown as written.
+const when = (d: string) => (/^\d{4}-\d{2}-\d{2}$/.test(d) ? `${shortDate(d, lang)}${lang === 'he' ? '.' : ' '}${d.slice(0, 4)}` : d);
+---
+<Base lang={lang} page="gallery" title={t(T.title, lang)}>
+  <div class="page grid">
+    <div class="head">
+      <h1>{t(T.title, lang)}</h1>
+    </div>
+    <div class="gal">
+      {gallery.map((g) => (
+        <figure class="piece">
+          {g.image
+            ? <img class="canvas" src={asset(`images/gallery/${g.image}`)} alt={t(g, lang)} loading="lazy" />
+            : <div class="canvas" aria-hidden="true"></div>}
+          <figcaption class="caption">{t(g, lang)} · {when(g.date)}{g.placeholder && <span class="tag">{t(texts.common.example, lang)}</span>}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</Base>

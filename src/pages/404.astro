@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import { texts, t, pageUrl } from '../lib/content';
+---
+<Base lang="he" page="404" title={t(texts.not_found.title, 'he')}>
+  <div class="page head">
+    <h1>{t(texts.not_found.title, 'he')}</h1>
+    <p lang="en" dir="ltr" class="muted">{t(texts.not_found.title, 'en')}</p>
+    <p><a class="u" href={pageUrl('home', 'he')}>{t(texts.not_found.back, 'he')}</a> · <a class="u" href={pageUrl('home', 'en')} lang="en">{t(texts.not_found.back, 'en')}</a></p>
+  </div>
+</Base>

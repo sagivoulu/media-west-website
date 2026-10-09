@@ -1,0 +1,7 @@
+# Photos on the Gallery page, newest first.
+# `image` is a file in public/images/gallery/ (JPG or WebP, about 1600px on the long side).
+# Leave `image` out to show an empty frame. Only use photos where the people in them agreed to be shown.
+- { he: "מסיבת חנוכת הסטודיו", en: "Studio-warming party", date: "2026-09-06", placeholder: true }
+- { he: "שיעור למתחילים", en: "Beginners class", date: "2026", placeholder: true }
+- { he: "מעגל יום הולדת", en: "Birthday circle", date: "2026", placeholder: true }
+- { he: "Mock Jack & Jill", en: "Mock Jack & Jill", date: "2026", placeholder: true }
