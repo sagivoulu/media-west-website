@@ -4,6 +4,11 @@
 # title: optional name of the evening, in both languages, e.g.  title: { he: "ערב ט״ו באב", en: "Tu B'Av night" }
 - { date: "2026-10-04", dj: "DJ Sagbot", url: "https://open.spotify.com/playlist/1aSJRqXJW03AnL8nOGrUob" }
 - { date: "2026-09-27", dj: "DJ Avish", url: "https://open.spotify.com/playlist/5bXcuzdAhoDvfLAjCiIcXK" }
+- { date: "2026-09-13", dj: "DJ Shlomix", url: "https://open.spotify.com/playlist/2UWVBoRalca7vpFnI5V9p0" }
+- { date: "2026-09-06", dj: "DJ Ronnie", title: { he: "פתיחת הסטודיו החדש", en: "Opening of the new studio" }, url: "https://open.spotify.com/playlist/4O88nwyDc17fDIIhe40206" }
+- { date: "2026-08-16", dj: "DJ Atom", url: "https://open.spotify.com/playlist/4hfqJ9ew5BRNlomDXVkNZp" }
+- { date: "2026-06-28", dj: "DJ Avish", url: "https://open.spotify.com/playlist/2g8Qi8KfHECuZtUkdjrBhX" }
+- { date: "2026-06-21", dj: "DJ Atom", url: "https://open.spotify.com/playlist/3uIwhk7i8X87tJwp3gOuJG" }
 - { date: "2025-08-10", dj: "DJ Sagbot", title: { he: "ט״ו באב", en: "Tu B'Av" }, url: "https://open.spotify.com/playlist/2MxpAEPycPpI8lpAQ5TGs6" }
 - { date: "2025-06-08", dj: "DJ Sagbot", url: "https://open.spotify.com/playlist/4WyfED9HJhTg3B7T7fjrSF" }
 - { date: "2025-04-20", dj: "DJ Sagbot", url: "https://open.spotify.com/playlist/5rBqcQ8GoLIw74Yq9XyzCu" }
