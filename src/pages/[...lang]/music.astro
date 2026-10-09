@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
 import { texts, djSets, t, langPaths, langOf, shortDate } from '../../lib/content';
 
 export const getStaticPaths = langPaths;
@@ -9,6 +10,7 @@ const T = texts.music;
 const sets = [...djSets].sort((a, b) => (b.date || '0').localeCompare(a.date || '0'));
 const when = (d: string) => (d ? `${shortDate(d, lang)}${lang === 'he' ? '.' : ' '}${d.slice(0, 4)}` : '');
 const service = (url: string) => (/spotify\.com/.test(url) ? 'Spotify' : /youtube|youtu\.be/.test(url) ? 'YouTube' : /soundcloud/.test(url) ? 'SoundCloud' : '');
+const iconOf = (url: string) => (/spotify\.com/.test(url) ? 'spotify' : '');
 ---
 <Base lang={lang} page="music" title={t(T.title, lang)} description={t(T.lead, lang)}>
   <div class="page grid">
@@ -22,8 +24,8 @@ const service = (url: string) => (/spotify\.com/.test(url) ? 'Spotify' : /youtub
         {sets.map((s) => (
           <a class="row" href={s.url} target="_blank" rel="noopener">
             <span class="k">{when(s.date)}</span>
-            <span class="v">{s.dj}</span>
-            <span class="x">{service(s.url)}<span class="arrow" aria-hidden="true">→</span></span>
+            <span class="v">{s.title ? <>{t(s.title, lang)}<span class="dot">·</span><span class="muted">{s.dj}</span></> : s.dj}</span>
+            <span class="x with-icon"><Icon name={iconOf(s.url)} />{service(s.url)}<span class="arrow" aria-hidden="true">→</span></span>
           </a>
         ))}
       </div>

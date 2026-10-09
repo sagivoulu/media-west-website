@@ -51,7 +51,7 @@ All copy and data live in `content/` - editors should only need to touch these f
 | `content/texts.yaml` | The copy of every page, Hebrew and English |
 | `content/questions.yaml` | Questions on the About page |
 | `content/staff.yaml` | Teachers and DJs (+ optional photo in `public/images/staff/`) |
-| `content/dj-sets.yaml` | Sets from past socials on the Music page: date, DJ, playlist link |
+| `content/dj-sets.yaml` | Sets from past socials on the Music page: date, DJ, playlist link, optional evening title |
 | `content/gallery.yaml` | Gallery photos (files in `public/images/gallery/`) |
 | `content/banners.yaml` | Dated announcements on Home (e.g. a theme night) |
 
@@ -106,7 +106,7 @@ Note: cloud sessions may not be able to open `*.github.io` (network policy). To 
 
 ## Not decided / not done yet
 
-- Real links: team contact, PayBox, Bit.
+- Real links: PayBox, Bit - and their logos, which the icon set (simple-icons) doesn't have; add SVGs to `src/components/Icon.astro` when the links exist.
 - Photos: staff portraits (with consent; only Sagiv / DJ Sagbot has one so far), gallery.
 - The "spirit of Media West" text on About (current text is a placeholder).
 - Dates of the three DJ Sagbot sets in `content/dj-sets.yaml` (they're in the Spotify playlist titles). More past sets from other DJs.
