@@ -1,6 +1,7 @@
 ---
 // The frame of every page: <head>, header with the always-visible menu, footer.
 import '../styles/global.css';
+import Icon from '../components/Icon.astro';
 import { site, texts, t, PAGES, pageUrl, asset, type Lang, type Page } from '../lib/content';
 
 interface Props { lang: Lang; page: Page; title?: string; description?: string }
@@ -61,7 +62,23 @@ const otherUrl = page === '404' ? pageUrl('home', other) : pageUrl(page, other);
       <slot />
     </main>
     <footer class="wrap">
-      <p class="foot">Media West · {t(texts.common.tagline, lang)}</p>
+      <div class="foot">
+        <p>Media West · {t(texts.common.tagline, lang)}</p>
+        <p class="foot-links">
+          <span>{t(texts.footer.contact, lang)}</span>
+          <a class="with-icon" href={site.links.messenger} target="_blank" rel="noopener"><Icon name="messenger" />{t(texts.footer.messenger, lang)}</a>
+        </p>
+        <p class="foot-links">
+          <a class="with-icon" href={site.links.facebook} target="_blank" rel="noopener"><Icon name="facebook" />Facebook</a>
+          <a class="with-icon" href={site.links.instagram} target="_blank" rel="noopener"><Icon name="instagram" />Instagram</a>
+          <a class="with-icon" href={site.links.whatsapp_group} target="_blank" rel="noopener"><Icon name="whatsapp" />WhatsApp - {t(texts.footer.whatsapp, lang)}</a>
+        </p>
+        <p class="foot-links">
+          <span>{lang === 'he' ? site.address.he : site.address.short_en}</span>
+          <a class="with-icon" href={site.address.waze} target="_blank" rel="noopener"><Icon name="waze" />Waze</a>
+          <a class="with-icon" href={site.address.google_maps} target="_blank" rel="noopener"><Icon name="googlemaps" />Google Maps</a>
+        </p>
+      </div>
     </footer>
     <script is:inline>
       // Theme toggle: system theme by default, the visitor's choice is remembered.

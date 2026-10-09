@@ -34,6 +34,7 @@ The logo keeps its own colors in both themes (orange `#C45C32` → pink `#D63C68
 ## Layout
 
 - Max width 1120px; side gutter 20px on phones, 48px from 760px.
+- Footer (every page, small and muted): a one-line description; how to contact us (Messenger on the Facebook page); Facebook, Instagram and the WhatsApp silent updates group; the address with Waze and Google Maps. People look for contact details in the footer, so they are always there.
 - Header: the name "Media West" at the start; language and theme switches at the end; **the menu is always visible** on its own row between two rules and wraps on narrow screens (no hamburger).
 - Pages: one column on phones; from 860px a 1:2 grid (title column + content column).
 - Listings ("rows"): label · value · end note, separated by thin rules. On phones the label moves above the value.
