@@ -63,14 +63,10 @@ if (staff) {
   });
 }
 
-(load('dj-schedule.yaml') ?? []).forEach((d, i) => {
-  if (!isDate(d.date)) errors.push(`dj-schedule.yaml #${i + 1}: date "${d.date}" must be YYYY-MM-DD`);
-  if (!d.dj) errors.push(`dj-schedule.yaml #${i + 1}: missing dj`);
-});
-
-(load('playlists.yaml') ?? []).forEach((p, i) => {
-  bi(p, `playlists.yaml #${i + 1}`);
-  if (!isUrl(p.url ?? '')) errors.push(`playlists.yaml #${i + 1}: url must be an https:// link or ""`);
+(load('dj-sets.yaml') ?? []).forEach((d, i) => {
+  if (d.date && !isDate(d.date)) errors.push(`dj-sets.yaml #${i + 1}: date "${d.date}" must be YYYY-MM-DD or ""`);
+  if (!d.dj) errors.push(`dj-sets.yaml #${i + 1}: missing dj`);
+  if (!d.url || !isUrl(d.url)) errors.push(`dj-sets.yaml #${i + 1}: url must be an https:// link to the playlist`);
 });
 
 (load('gallery.yaml') ?? []).forEach((g, i) => {

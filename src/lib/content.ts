@@ -4,8 +4,7 @@ import siteRaw from '../../content/site.yaml?raw';
 import textsRaw from '../../content/texts.yaml?raw';
 import questionsRaw from '../../content/questions.yaml?raw';
 import staffRaw from '../../content/staff.yaml?raw';
-import djScheduleRaw from '../../content/dj-schedule.yaml?raw';
-import playlistsRaw from '../../content/playlists.yaml?raw';
+import djSetsRaw from '../../content/dj-sets.yaml?raw';
 import galleryRaw from '../../content/gallery.yaml?raw';
 import bannersRaw from '../../content/banners.yaml?raw';
 
@@ -16,8 +15,7 @@ export const site = YAML.parse(siteRaw);
 export const texts = YAML.parse(textsRaw);
 export const questions: { q: Bi; a: Bi; link?: { url_key: string } & Bi }[] = YAML.parse(questionsRaw) ?? [];
 export const staff: { teachers: (Bi & { photo?: string })[]; djs: { name: string; photo?: string }[] } = YAML.parse(staffRaw);
-export const djSchedule: { date: string; dj: string; placeholder?: boolean }[] = YAML.parse(djScheduleRaw) ?? [];
-export const playlists: (Bi & { service: string; url: string })[] = YAML.parse(playlistsRaw) ?? [];
+export const djSets: { date: string; dj: string; url: string }[] = YAML.parse(djSetsRaw) ?? [];
 export const gallery: (Bi & { date: string; image?: string })[] = YAML.parse(galleryRaw) ?? [];
 export const banners: (Bi & { from: string; to: string; link?: string })[] = YAML.parse(bannersRaw) ?? [];
 

@@ -1,7 +1,0 @@
-# Media West DJ per Sunday, shown on the Music page. Only date and DJ name - nothing else from the DJ Scheduler.
-# Past dates hide themselves. Update from the DJ Scheduler (a routine can do this).
-# date: YYYY-MM-DD
-- { date: "2026-10-11", dj: "DJ Funky", placeholder: true }
-- { date: "2026-10-18", dj: "DJ Ripple", placeholder: true }
-- { date: "2026-10-25", dj: "DJ Fani", placeholder: true }
-- { date: "2026-11-01", dj: "DJ Sagbot", placeholder: true }

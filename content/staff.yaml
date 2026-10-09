@@ -8,11 +8,11 @@ teachers:
   - { he: "מאשה", en: "Masha" }
   - { he: "ירון", en: "Yaron" }
   - { he: "ניצן", en: "Nitsan" }
-  - { he: "שגיב", en: "Sagiv" }
+  - { he: "שגיב", en: "Sagiv", photo: "sagiv.jpg" }
   - { he: "הלן", en: "Helen" }
 
 djs:
-  - { name: "DJ Sagbot" }
+  - { name: "DJ Sagbot", photo: "sagiv.jpg" }
   - { name: "DJ Funky" }
   - { name: "DJ Ripple" }
   - { name: "DJ Fani" }

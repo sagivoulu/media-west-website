@@ -22,10 +22,10 @@ address:
   google_maps: "https://www.google.com/maps/search/?api=1&query=Jabotinsky+St+53+Ramat+Gan"
 
 links:
-  whatsapp_group: ""      # invite link to the public updates group (מדיה ווסט - הודעות, עדכונים)
+  whatsapp_group: "https://chat.whatsapp.com/I4dYpXzp4x788C2xYCv3xq"   # silent group, updates only
   whatsapp_contact: ""    # how people message the team
-  instagram: ""
-  facebook: ""
+  instagram: "https://www.instagram.com/tlvmediawest"
+  facebook: "https://www.facebook.com/MediaWestCoast"
   paybox: ""
   bit: ""
   birthday_form: "https://docs.google.com/forms/d/e/1FAIpQLScw7zQGsQnD4GdETS8522dYe-4vRcMp2yh31xHEpd9_PrpLDg/viewform"

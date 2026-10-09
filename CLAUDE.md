@@ -24,7 +24,7 @@ An experiment agreed in the staff group (October 2026): a simple site with our d
 
 - **Home shows only the essence** - the same text as the Facebook cover: West Coast Swing · Every Sunday / Classes 20:30 · Party 21:40 / Jabotinsky 53, Ramat Gan / No partner needed · No registration · Just show up / Free entry · Donation based.
 - **Minimal on purpose.** Keep only what helps a visitor find the info. Don't add sections, decoration or text "just because" - every page should stay short.
-- **No weekly lineup** (who teaches, theme nights) - it would be one more place to update every week. The Updates page links to WhatsApp, Instagram and Facebook instead. The one exception is the DJ schedule on the Music page, which comes from data that's already maintained.
+- **No weekly lineup** (who teaches, theme nights) - it would be one more place to update every week. The Updates page links to WhatsApp, Instagram and Facebook instead. That includes the DJ schedule: the Music page lists only **past** sets (date, DJ, playlist link), which never need updating once added.
 - **No class-level details** (Level 1-3, Technique). The site says classes are for every level, including zero experience.
 
 Pages: Home, Music, Staff, Gallery, About, Location, Updates (the menu is always visible), in Hebrew (default, `/`) and English (`/en/`).
@@ -37,9 +37,9 @@ Pages: Home, Music, Staff, Gallery, About, Location, Updates (the menu is always
 | Content | YAML files in `content/`, read at build time (`src/lib/content.ts`). |
 | Hosting now | GitHub Pages (see Deploying). |
 | Hosting later | Cloudflare (free plan, custom domain, Cloudflare Web Analytics) - not set up yet. |
-| Content updates | Pull requests: people editing through Claude Code, and scheduled routines (e.g. the DJ schedule from the DJ Scheduler). |
+| Content updates | Pull requests: people editing through Claude Code, and scheduled routines if any are added later. |
 
-Date-based content (DJ schedule, banners, the "new address" tag) is filtered at build time **and** re-checked in the browser on load (inline script in `src/layouts/Base.astro`), so it stays correct between builds.
+Date-based content (banners, the "new address" tag) is filtered at build time **and** re-checked in the browser on load (inline script in `src/layouts/Base.astro`), so it stays correct between builds.
 
 ## Editing content
 
@@ -51,8 +51,7 @@ All copy and data live in `content/` - editors should only need to touch these f
 | `content/texts.yaml` | The copy of every page, Hebrew and English |
 | `content/questions.yaml` | Questions on the About page |
 | `content/staff.yaml` | Teachers and DJs (+ optional photo in `public/images/staff/`) |
-| `content/dj-schedule.yaml` | DJ per Sunday (date + DJ name only) |
-| `content/playlists.yaml` | Playlists on the Music page |
+| `content/dj-sets.yaml` | Sets from past socials on the Music page: date, DJ, playlist link |
 | `content/gallery.yaml` | Gallery photos (files in `public/images/gallery/`) |
 | `content/banners.yaml` | Dated announcements on Home (e.g. a theme night) |
 
@@ -107,8 +106,8 @@ Note: cloud sessions may not be able to open `*.github.io` (network policy). To 
 
 ## Not decided / not done yet
 
-- Real links: WhatsApp group invite, team contact, Instagram, Facebook, PayBox, Bit, playlists.
-- Photos: staff portraits (with consent), gallery.
+- Real links: team contact, PayBox, Bit.
+- Photos: staff portraits (with consent; only Sagiv / DJ Sagbot has one so far), gallery.
 - The "spirit of Media West" text on About (current text is a placeholder).
-- The DJ schedule is placeholder data; a routine should keep `content/dj-schedule.yaml` in sync with the DJ Scheduler.
+- Dates of the three DJ Sagbot sets in `content/dj-sets.yaml` (they're in the Spotify playlist titles). More past sets from other DJs.
 - Moving to Cloudflare, a custom domain, analytics.

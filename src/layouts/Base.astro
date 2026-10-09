@@ -85,11 +85,6 @@ const otherUrl = page === '404' ? pageUrl('home', other) : pageUrl(page, other);
         var today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Jerusalem' }).format(new Date());
         document.querySelectorAll('[data-until]').forEach(function (el) { if (el.dataset.until < today) el.hidden = true; });
         document.querySelectorAll('[data-from]').forEach(function (el) { if (el.dataset.from > today) el.hidden = true; });
-        document.querySelectorAll('[data-empty-for]').forEach(function (msg) {
-          var list = document.getElementById(msg.dataset.emptyFor);
-          var any = list && Array.prototype.some.call(list.children, function (c) { return !c.hidden; });
-          msg.hidden = !!any;
-        });
       })();
     </script>
   </body>
