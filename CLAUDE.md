@@ -2,7 +2,7 @@
 
 The website of **Media West**, a volunteer-run West Coast Swing (WCS) community with a weekly Sunday social in Ramat Gan.
 
-**Live preview:** https://sagivoulu.github.io/media-west-website/ (English: `/en/`). Built and deployed from `main` by GitHub Actions.
+**Live preview:** https://sagivoulu.github.io/media-west-website/ (English: `/en/`). GitHub Pages serves the `gh-pages` branch - see Deploying below.
 
 ## ⚠️ This repository and the site are PUBLIC
 
@@ -35,7 +35,7 @@ Pages: Home, Music, Staff, Gallery, About, Location, Updates (the menu is always
 |---|---|
 | Site | [Astro](https://astro.build), fully static (`astro build` → `dist/`). No backend, no client framework. |
 | Content | YAML files in `content/`, read at build time (`src/lib/content.ts`). |
-| Hosting now | GitHub Pages, deployed by `.github/workflows/deploy.yml` on every push to `main`. |
+| Hosting now | GitHub Pages (see Deploying). |
 | Hosting later | Cloudflare (free plan, custom domain, Cloudflare Web Analytics) - not set up yet. |
 | Content updates | Pull requests: people editing through Claude Code, and scheduled routines (e.g. the DJ schedule from the DJ Scheduler). |
 
@@ -84,8 +84,25 @@ node scripts/check-content.mjs  # validate content/ (also runs in CI)
 npm run build                   # build to dist/
 ```
 
-- Work on a branch and open a PR. CI builds every PR; it must pass before merging.
-- Merging to `main` deploys to GitHub Pages within ~2 minutes. After a deploy, open the live preview and check the pages you changed (both languages, phone width, light and dark).
+- Work on a branch and open a PR. Run `node scripts/check-content.mjs` and `npm run build` before pushing; once the CI workflow is installed it runs them on every PR and must pass before merging.
+- After a deploy, open the live preview and check the pages you changed (both languages, phone width, light and dark).
+
+## Deploying
+
+**Now:** GitHub Pages serves the `gh-pages` branch (Settings → Pages → "Deploy from a branch", `gh-pages` / root). After merging to `main`, run from an up-to-date `main`:
+
+```bash
+npm run deploy   # check content, build, push dist/ to gh-pages (with .nojekyll)
+```
+
+Pages publishes it within a minute or two (the "pages build and deployment" run in the Actions tab).
+
+**Target:** automatic deploy on every merge, by the workflow in `docs/deploy-workflow.yml`. Claude's GitHub access here can't create files in `.github/workflows/` (GitHub requires a separate "workflow" permission), so a person installs it once:
+1. Create `.github/workflows/deploy.yml` on GitHub (Add file → Create new file) with the contents of `docs/deploy-workflow.yml`, and commit to `main`.
+2. Settings → Pages → Source: **GitHub Actions**.
+3. From then on every merge to `main` deploys, every PR gets a build check, and `npm run deploy` / the `gh-pages` branch are no longer needed.
+
+Note: cloud sessions may not be able to open `*.github.io` (network policy). To verify a deploy there, clone the `gh-pages` branch and serve it locally under `/media-west-website/`.
 - Commit messages and PR text are public too - keep them free of internal details.
 
 ## Not decided / not done yet

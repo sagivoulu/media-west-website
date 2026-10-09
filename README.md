@@ -14,11 +14,11 @@ The website of Media West, a volunteer-run West Coast Swing community dancing ev
 
 - A static site built with [Astro](https://astro.build). No backend.
 - All texts, links and data are YAML files in [`content/`](content/); images are in [`public/images/`](public/images/).
-- Every push to `main` builds the site and deploys it to GitHub Pages ([workflow](.github/workflows/deploy.yml)).
+- GitHub Pages serves the built site from the `gh-pages` branch. After merging to `main`, `npm run deploy` publishes it. Automatic deploys on merge are ready in [docs/deploy-workflow.yml](docs/deploy-workflow.yml) and need to be installed once ([how](CLAUDE.md#deploying)).
 
 ## Changing content
 
-Edit the files in [`content/`](content/) (or ask Claude Code to), open a pull request, and merge it once the check passes. The site updates about two minutes later. Details: [CLAUDE.md → Editing content](CLAUDE.md#editing-content). The design is described in [docs/design.md](docs/design.md).
+Edit the files in [`content/`](content/) (or ask Claude Code to), open a pull request, merge it, and deploy. The site updates a minute or two later. Details: [CLAUDE.md → Editing content](CLAUDE.md#editing-content). The design is described in [docs/design.md](docs/design.md).
 
 ## Running locally
 
