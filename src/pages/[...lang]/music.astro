@@ -24,7 +24,7 @@ const iconOf = (url: string) => (/spotify\.com/.test(url) ? 'spotify' : '');
         {sets.map((s) => (
           <a class="row" href={s.url} target="_blank" rel="noopener">
             <span class="k">{when(s.date)}</span>
-            <span class="v">{s.title ? <>{t(s.title, lang)}<span class="dot">·</span><span class="muted">{s.dj}</span></> : s.dj}</span>
+            <span class="v">{s.title ? <>{t(s.title, lang)}<span class="dot">·</span><wbr /><span class="muted nw">{s.dj}</span></> : <span class="nw">{s.dj}</span>}</span>
             <span class="x with-icon"><Icon name={iconOf(s.url)} />{service(s.url)}<span class="arrow" aria-hidden="true">→</span></span>
           </a>
         ))}
