@@ -3,7 +3,7 @@
 #
 # A link left empty ("") shows on the site as "coming soon" instead of a link.
 
-# While true, the site shows a thin "preview" strip and asks search engines not to index it.
+# While true, search engines are asked not to index the site (it is not public yet).
 preview: true
 
 schedule:

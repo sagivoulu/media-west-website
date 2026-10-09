@@ -2,14 +2,22 @@
 # `photo` is a file in public/images/staff/ (e.g. "yali.jpg", 4:5 portrait). Leave it out to show an empty frame.
 # Only list people who agreed to appear on the public site.
 teachers:
-  - { he: "יהלי", en: "Yali" }
-  - { he: "קרן", en: "Karen" }
+  # Everyone who taught at Media West in the last 6 months, in Hebrew alphabetical order.
+  - { he: "אבישי", en: "Avish" }
+  - { he: "אוריז", en: "Oriz" }
   - { he: "בנשי", en: "Benshi" }
-  - { he: "מאשה", en: "Masha" }
-  - { he: "ירון", en: "Yaron" }
-  - { he: "ניצן", en: "Nitsan" }
-  - { he: "שגיב", en: "Sagiv", photo: "sagiv.jpg" }
+  - { he: "ברק", en: "Barak" }
   - { he: "הלן", en: "Helen" }
+  - { he: "יאיר", en: "Yair" }
+  - { he: "יהלי", en: "Yali" }
+  - { he: "ירון", en: "Yaron" }
+  - { he: "מאשה", en: "Masha" }
+  - { he: "מעיין", en: "Maayan" }
+  - { he: "ניצן", en: "Nitsan" }
+  - { he: "קרן", en: "Karen" }
+  - { he: "רוני", en: "Ronnie" }
+  - { he: "שגיב", en: "Sagiv", photo: "sagiv.jpg" }
+  - { he: "שלומי", en: "Shlompi" }
 
 djs:
   # DJ names (the names the DJs play under), alphabetical.

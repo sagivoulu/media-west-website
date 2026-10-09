@@ -59,7 +59,7 @@ Conventions:
 - Every text has `he` and `en`. Both are required (the check fails otherwise).
 - A link left `""` shows as "coming soon". `placeholder: true` shows a small "example" tag - remove it when the real content is in.
 - Dates are `YYYY-MM-DD`.
-- `site.yaml` → `preview: true` shows the "preview version" strip and adds `noindex`. Set it to `false` only when the site goes public for real.
+- `site.yaml` → `preview: true` asks search engines not to index the site (`noindex`). Set it to `false` only when the site goes public for real.
 
 ## Voice and wording
 
