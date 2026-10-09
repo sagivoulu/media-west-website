@@ -12,11 +12,13 @@ teachers:
   - { he: "הלן", en: "Helen" }
 
 djs:
-  - { name: "DJ Sagbot", photo: "sagiv.jpg" }
-  - { name: "DJ Funky" }
-  - { name: "DJ Ripple" }
-  - { name: "DJ Fani" }
+  # DJ names (the names the DJs play under), alphabetical.
+  - { name: "DJ A-Tom" }
   - { name: "DJ Avish" }
-  - { name: "DJ Shlomix" }
+  - { name: "DJ Funky" }
+  - { name: "DJ Reckless" }
+  - { name: "DJ Ripple" }
   - { name: "DJ Ronnie" }
-  - { name: "DJ Atom" }
+  - { name: "DJ Sagbot", photo: "sagiv.jpg" }
+  - { name: "DJ ShloMix" }
+  - { name: "DJ Tein" }
