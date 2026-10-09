@@ -20,7 +20,7 @@ Defined as CSS variables in `src/styles/global.css`. The site follows the visito
 | `--muted` | `#86576F` mauve | `#B9A9C4` | labels, captions, secondary text |
 | `--rule` | plum 16% | peach 18% | thin lines |
 | `--accent` | `#D63C68` logo pink | `#FFBFA0` peach glow | hover |
-| `--orange` | `#C45C32` logo orange | `#F87746` neon orange | the "new address" mark - the only colored text |
+| `--orange` | `#C45C32` logo orange | `#F87746` neon orange | the rule under a banner - the only color besides the logo |
 | `--frame` | `#FFFFFF` | `#281E40` indigo | picture frames |
 
 The logo keeps its own colors in both themes (orange `#C45C32` → pink `#D63C68`); in dark mode it gets a soft neon glow (from the dark Facebook cover).
@@ -44,7 +44,7 @@ The logo keeps its own colors in both themes (orange `#C45C32` → pink `#D63C68
 
 | Page | Content |
 |---|---|
-| Home | Logo; active banners (if any); the wall text: West Coast Swing · day / classes · party times / address / "new address" (until end of 2026) / no partner · no registration · just show up / free entry · donation based |
+| Home | Logo; active banners (if any); the wall text: West Coast Swing · day / classes · party times / address / no partner · no registration · just show up / free entry · donation based |
 | Music | One line on the music; sets from past socials (date · evening title if any · DJ · Spotify link), newest first |
 | Staff | Teachers, then DJs - portrait and name |
 | Gallery | Photos with captions |
@@ -57,7 +57,7 @@ The logo keeps its own colors in both themes (orange `#C45C32` → pink `#D63C68
 - **Languages:** Hebrew at `/` (right-to-left), English at `/en/` (left-to-right). The switch keeps you on the same page.
 - **Brand icons:** links to WhatsApp, Instagram, Facebook, Messenger, Waze, Google Maps and Spotify show the service's icon in its brand color (from simple-icons, CC0), so they're easy to spot. The icon is decorative; the text next to it names the service.
 - **Missing content:** an empty link shows "coming soon" instead of a dead link; placeholder content carries a small dashed "example" tag; a missing photo shows an empty frame.
-- **Dates:** banners outside their dates and the "new address" mark after 2026 are removed at build time and re-checked in the browser (Israel time), so nothing goes stale between builds.
+- **Dates:** banners outside their dates are removed at build time and re-checked in the browser (Israel time), so nothing goes stale between builds.
 - **Preview mode** (`preview: true`): a thin strip at the top says it's a preview, and search engines are asked not to index the site.
 
 ## Accessibility and performance

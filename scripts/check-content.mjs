@@ -31,7 +31,6 @@ for (const f of readdirSync(dir).filter((f) => f.endsWith('.yaml'))) {
 
 const site = load('site.yaml');
 if (site) {
-  if (!isDate(site.address?.new_until)) errors.push('site.yaml: address.new_until must be a YYYY-MM-DD date');
   for (const [k, v] of Object.entries(site.links ?? {})) if (!isUrl(v ?? '')) errors.push(`site.yaml: links.${k} must be an https:// link or ""`);
   for (const k of ['waze', 'google_maps']) if (!isUrl(site.address?.[k] ?? 'x')) errors.push(`site.yaml: address.${k} must be an https:// link`);
 }

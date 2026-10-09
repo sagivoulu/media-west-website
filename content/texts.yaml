@@ -15,7 +15,6 @@ nav:
 common:
   classes: { he: "שיעורים", en: "Classes" }
   party: { he: "מסיבה", en: "Party" }
-  new_address: { he: "כתובת חדשה", en: "New address" }
   soon: { he: "בקרוב", en: "Coming soon" }
   example: { he: "דוגמה", en: "Example" }
   preview: { he: "גרסת תצוגה מקדימה - חלק מהתוכן זמני", en: "Preview version - some content is temporary" }
@@ -62,7 +61,6 @@ about:
 
 location:
   title: { he: "איך מגיעים", en: "Location" }
-  new_since: { he: "כתובת חדשה מספטמבר 2026", en: "New address since September 2026" }
   copy: { he: "העתקת הכתובת", en: "Copy address" }
   copied: { he: "הכתובת הועתקה", en: "Address copied" }
   contact: { he: "צור קשר", en: "Contact" }
