@@ -29,9 +29,9 @@ const addr = lang === 'he' ? site.address.he : site.address.short_en;
       <p class="l2">{addr}</p>
       {showNew && <p class="new" data-until={site.address.new_until}>{t(texts.common.new_address, lang)}</p>}
       <p class="l3">
-        {texts.home.promise.map((p: any, i: number) => (<>{i > 0 && <span class="dot">·</span>}<span class="nw">{t(p, lang)}</span></>))}
+        {texts.home.promise.map((p: any, i: number) => (<>{i > 0 && <><span class="dot">·</span><wbr /></>}<span class="nw">{t(p, lang)}</span></>))}
         <br />
-        {texts.home.entry.map((p: any, i: number) => (<>{i > 0 && <span class="dot">·</span>}<span class="nw">{t(p, lang)}</span></>))}
+        {texts.home.entry.map((p: any, i: number) => (<>{i > 0 && <><span class="dot">·</span><wbr /></>}<span class="nw">{t(p, lang)}</span></>))}
       </p>
     </div>
   </div>
