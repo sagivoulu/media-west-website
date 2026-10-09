@@ -1,0 +1,10 @@
+# The questions on the About page. Optional `link` adds a link after the answer.
+- q: { he: "מה זה West Coast Swing?", en: "What is West Coast Swing?" }
+  a: { he: "ריקוד זוגי חברתי, רך וגמיש, על מוזיקה עכשווית. יש בו הרבה מקום לאלתור.", en: "A smooth, flexible social partner dance to contemporary music, with lots of room to improvise." }
+
+- q: { he: "אף פעם לא רקדתי. מאיפה מתחילים?", en: "I've never danced. Where do I start?" }
+  a: { he: "מגיעים ב-20:30 לשיעור למתחילים, ונשארים למסיבה.", en: "Come at 20:30 for the beginners' class, then stay for the party." }
+
+- q: { he: "אפשר לחגוג אצלכם יום הולדת?", en: "Can I celebrate my birthday with you?" }
+  a: { he: "כן - רוקדים לכבודך מעגל על השיר שבחרת. ממלאים את הטופס לפחות שבועיים מראש.", en: "Yes - we dance a circle for you to the song you choose. Fill the form at least two weeks ahead." }
+  link: { url_key: birthday_form, he: "לטופס מעגל יום הולדת", en: "Birthday circle form" }

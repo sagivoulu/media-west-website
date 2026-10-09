@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+import { site, texts, questions, t, langPaths, langOf } from '../../lib/content';
+
+export const getStaticPaths = langPaths;
+const lang = langOf(Astro.params.lang);
+const T = texts.about;
+const ext = { target: '_blank', rel: 'noopener' };
+const donate = [
+  { name: 'PayBox', url: site.links.paybox },
+  { name: 'Bit', url: site.links.bit },
+];
+---
+<Base lang={lang} page="about" title={t(T.title, lang)} description={t(T.lead, lang)}>
+  <div class="page grid">
+    <div class="head">
+      <h1>{t(T.title, lang)}</h1>
+      <p class="lead">{t(T.lead, lang)}</p>
+    </div>
+    <div class="stack">
+      <p class="lead" style="max-width: 44ch">{t(T.spirit, lang)}{T.spirit.placeholder && <span class="tag">{t(texts.common.example, lang)}</span>}</p>
+      <section class="block" aria-labelledby="don-h">
+        <h2 class="label" id="don-h">{t(T.donations, lang)}</h2>
+        <p>{t(T.donations_text, lang)}</p>
+        <div class="links">
+          {donate.map((d) => d.url
+            ? <a href={d.url} {...ext}>{d.name}<span class="arrow" aria-hidden="true">→</span></a>
+            : <span class="soon">{d.name} · {t(texts.common.soon, lang)}</span>)}
+        </div>
+      </section>
+      <section class="block" aria-labelledby="q-h">
+        <h2 class="label" id="q-h">{t(T.questions, lang)}</h2>
+        <div>
+          {questions.map((q) => (
+            <details>
+              <summary>{t(q.q, lang)}</summary>
+              <div class="ans">
+                <p>{t(q.a, lang)}</p>
+                {q.link && site.links[q.link.url_key] && (
+                  <p><a class="u" href={site.links[q.link.url_key]} {...ext}>{t(q.link, lang)}<span class="arrow" aria-hidden="true">→</span></a></p>
+                )}
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
+    </div>
+  </div>
+</Base>

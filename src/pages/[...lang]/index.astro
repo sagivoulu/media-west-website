@@ -1,0 +1,38 @@
+---
+// Home: the essence of Media West (the Facebook cover text) and nothing else.
+import Base from '../../layouts/Base.astro';
+import wordmark from '../../assets/wordmark.svg?raw';
+import { site, texts, banners, t, langPaths, langOf, todayIL } from '../../lib/content';
+
+export const getStaticPaths = langPaths;
+const lang = langOf(Astro.params.lang);
+const today = todayIL();
+const activeBanners = banners.filter((b) => b.to >= today);
+const showNew = site.address.new_until >= today;
+const addr = lang === 'he' ? site.address.he : site.address.short_en;
+---
+<Base lang={lang} page="home">
+  <div class="page home">
+    <div class="logo" role="img" aria-label="Media West" set:html={wordmark} />
+    {activeBanners.length > 0 && (
+      <div class="banners">
+        {activeBanners.map((b) => (
+          <p class="banner" data-from={b.from} data-until={b.to}>
+            {b.link ? <a href={b.link}>{t(b, lang)}<span class="arrow">→</span></a> : t(b, lang)}
+          </p>
+        ))}
+      </div>
+    )}
+    <div class="wall">
+      <p class="l1">West Coast Swing<span class="dot">·</span>{t(site.schedule.day, lang)}</p>
+      <p class="l2">{t(texts.common.classes, lang)} {site.schedule.classes}<span class="dot">·</span>{t(texts.common.party, lang)} {site.schedule.party}</p>
+      <p class="l2">{addr}</p>
+      {showNew && <p class="new" data-until={site.address.new_until}>{t(texts.common.new_address, lang)}</p>}
+      <p class="l3">
+        {texts.home.promise.map((p: any, i: number) => (<>{i > 0 && <span class="dot">·</span>}{t(p, lang)}</>))}
+        <br />
+        {texts.home.entry.map((p: any, i: number) => (<>{i > 0 && <span class="dot">·</span>}{t(p, lang)}</>))}
+      </p>
+    </div>
+  </div>
+</Base>

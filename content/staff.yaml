@@ -1,0 +1,18 @@
+# Teachers and DJs on the Staff page.
+# `photo` is a file in public/images/staff/ (e.g. "yali.jpg", 4:5 portrait). Leave it out to show an empty frame.
+# Only list people who agreed to appear on the public site.
+teachers:
+  - { he: "יהלי", en: "Yali" }
+  - { he: "קרן", en: "Karen" }
+  - { he: "בנשי", en: "Benshi" }
+  - { he: "מאשה", en: "Masha" }
+  - { he: "ירון", en: "Yaron" }
+  - { he: "ניצן", en: "Nitsan" }
+  - { he: "שגיב", en: "Sagiv" }
+  - { he: "הלן", en: "Helen" }
+
+djs:
+  - { name: "DJ Sagbot" }
+  - { name: "DJ Funky" }
+  - { name: "DJ Ripple" }
+  - { name: "DJ Fani" }

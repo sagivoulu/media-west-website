@@ -1,0 +1,10 @@
+# Short announcements shown on the home page between two dates (inclusive), e.g. a theme night or a cancelled Sunday.
+# Outside its dates a banner hides itself. Leave the list empty ([]) for no banner.
+#
+# Example:
+# - from: "2026-10-26"
+#   to: "2026-11-01"
+#   he: "ראשון 1.11 - ערב האלווין, באים בתחפושת"
+#   en: "Sunday 1.11 - Halloween night, come in costume"
+#   link: ""          # optional
+[]

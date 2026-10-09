@@ -1,0 +1,3 @@
+# Playlists on the Music page. Leave `url` empty to show "coming soon".
+- { service: "Spotify", he: "המסיבה של ראשון", en: "The Sunday party", url: "" }
+- { service: "Spotify", he: "לתרגל בבית", en: "Practice at home", url: "" }
