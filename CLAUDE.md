@@ -24,10 +24,10 @@ An experiment agreed in the staff group (October 2026): a simple site with our d
 
 - **Home shows only the essence** - the same text as the Facebook cover: West Coast Swing · Every Sunday / Classes 20:30 · Party 21:40 / Jabotinsky 53, Ramat Gan / No partner needed · No registration · Just show up / Free entry · Donation based.
 - **Minimal on purpose.** Keep only what helps a visitor find the info. Don't add sections, decoration or text "just because" - every page should stay short.
-- **No weekly lineup** (who teaches, theme nights) - it would be one more place to update every week. The Updates page links to WhatsApp, Instagram and Facebook instead. That includes the DJ schedule: the Music page lists only **past** sets (date, DJ, playlist link), which never need updating once added.
+- **No weekly lineup** (who teaches, theme nights) - it would be one more place to update every week. The Socials page links to WhatsApp, Instagram and Facebook instead. That includes the DJ schedule: the Music page lists only **past** sets (date, DJ, playlist link), which never need updating once added.
 - **No class-level details** (Level 1-3, Technique). The site says classes are for every level, including zero experience.
 
-Pages: Home, Music, Staff, Gallery, About, Location, Updates (the menu is always visible), in Hebrew (default, `/`) and English (`/en/`).
+Pages, in menu order: Home, About, Location, Socials, Music, Staff, Gallery (the menu is always visible; the practical pages come first). `/updates/` is the old name of Socials and forwards there, in Hebrew (default, `/`) and English (`/en/`).
 
 ## Stack
 

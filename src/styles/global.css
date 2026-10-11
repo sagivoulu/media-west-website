@@ -8,7 +8,6 @@
   --accent: #D63C68;    /* Logo Pink - hover */
   --orange: #C45C32;    /* Logo Orange - the one highlight */
   --frame: #FFFFFF;     /* picture frames */
-  --logo-glow: none;
 
   --f: "Heebo", "Helvetica Neue", Arial, system-ui, sans-serif;
   --t-label: .75rem;
@@ -23,14 +22,12 @@
   :root:not([data-theme="light"]) {
     --bg: #0D0E2B; --ink: #FFFFFF; --muted: #B9A9C4; --rule: rgba(255, 191, 160, .18);
     --accent: #FFBFA0; --orange: #F87746; --frame: #281E40;
-    --logo-glow: drop-shadow(0 0 14px rgba(248, 119, 70, .45)) drop-shadow(0 0 28px rgba(228, 56, 108, .25));
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0D0E2B; --ink: #FFFFFF; --muted: #B9A9C4; --rule: rgba(255, 191, 160, .18);
   --accent: #FFBFA0; --orange: #F87746; --frame: #281E40;
-  --logo-glow: drop-shadow(0 0 14px rgba(248, 119, 70, .45)) drop-shadow(0 0 28px rgba(228, 56, 108, .25));
   color-scheme: dark;
 }
 
@@ -99,7 +96,7 @@ footer { padding-block: 24px 40px; font-size: .8125rem; color: var(--muted); }
 /* home: the logo hangs alone with its wall text */
 .home { display: grid; justify-items: center; gap: 48px; padding-block: 8vh 9vh; text-align: center; }
 .home .logo { width: min(62vw, 400px); }
-.home .logo svg { width: 100%; height: auto; display: block; filter: var(--logo-glow); }
+.home .logo svg { width: 100%; height: auto; display: block; }
 .wall { display: grid; gap: 10px; justify-items: center; }
 .wall .l1 { font-size: var(--t-lead); }
 .wall .l2 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 400; font-variant-numeric: tabular-nums; line-height: 1.25; }
