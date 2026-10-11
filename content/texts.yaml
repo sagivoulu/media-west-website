@@ -61,6 +61,7 @@ about:
     placeholder: true
   donations: { he: "תרומות", en: "Donations" }
   donations_text: { he: "הכניסה חופשית, על בסיס תרומה.", en: "Entry is free, donation based." }
+  donate: { he: "לתרומה למדיה", en: "Donate to Media West" }
   birthday: { he: "מעגל יום הולדת", en: "Birthday circle" }
   birthday_text: { he: "יש יום הולדת? רוקדים לכבודך מעגל במסיבה, על השיר שבחרת. ממלאים את הטופס לפחות שבועיים מראש.", en: "Birthday coming up? We dance a circle for you at the party, to the song you choose. Fill the form at least two weeks ahead." }
   birthday_form: { he: "לטופס מעגל יום הולדת", en: "Birthday circle form" }
