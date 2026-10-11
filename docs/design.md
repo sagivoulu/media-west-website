@@ -46,7 +46,7 @@ The logo keeps its own colors in both themes (orange `#C45C32` → pink `#D63C68
 | Page | Content |
 |---|---|
 | Home | Logo; active banners (if any); the wall text: West Coast Swing · day / classes · party times / address / no partner · no registration · just show up / free entry · donation based |
-| About | One-line description; the spirit of Media West; donations (PayBox, Bit); birthday circle with the form link; two questions |
+| About | One-line description; the spirit of Media West; donations (one link, from the public WhatsApp group's description); birthday circle with the form link; two questions |
 | Location | Address (big); day and times; Waze, Google Maps, copy address; contact via Messenger on the Facebook page |
 | Socials | WhatsApp (silent updates group), Instagram, Facebook. Was "Updates" - renamed because it sounded like news flashes; `/updates/` forwards here |
 | Music | One line on the music; sets from past socials (date · evening title if any · DJ · Spotify link), newest first |

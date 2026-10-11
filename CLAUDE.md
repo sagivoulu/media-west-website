@@ -106,7 +106,6 @@ Note: cloud sessions may not be able to open `*.github.io` (network policy). To 
 
 ## Not decided / not done yet
 
-- Real links: PayBox, Bit - and their logos, which the icon set (simple-icons) doesn't have; add SVGs to `src/components/Icon.astro` when the links exist.
 - Photos: staff portraits (with consent; only Sagiv / DJ Sagbot has one so far), gallery.
 - The "spirit of Media West" text on About (current text is a placeholder).
 - Dates of the three DJ Sagbot sets in `content/dj-sets.yaml` (they're in the Spotify playlist titles). More past sets from other DJs.
