@@ -1,22 +1,18 @@
 ---
-import Base from '../../layouts/Base.astro';
-import LinkRow from '../../components/LinkRow.astro';
-import { site, texts, t, langPaths, langOf } from '../../lib/content';
-
+// The Updates page was renamed to Socials (October 2026). Old links forward to the new address.
+import { pageUrl, langPaths, langOf } from '../../lib/content';
 export const getStaticPaths = langPaths;
 const lang = langOf(Astro.params.lang);
-const T = texts.updates;
+const to = pageUrl('socials', lang);
 ---
-<Base lang={lang} page="updates" title={t(T.title, lang)} description={t(T.lead, lang)}>
-  <div class="page grid">
-    <div class="head">
-      <h1>{t(T.title, lang)}</h1>
-      <p class="lead">{t(T.lead, lang)}</p>
-    </div>
-    <div class="rows lg">
-      <LinkRow lang={lang} k="WhatsApp" icon="whatsapp" v={t(T.whatsapp, lang)} url={site.links.whatsapp_group} />
-      <LinkRow lang={lang} k="Instagram" icon="instagram" v={t(T.instagram, lang)} url={site.links.instagram} />
-      <LinkRow lang={lang} k="Facebook" icon="facebook" v={t(T.facebook, lang)} url={site.links.facebook} />
-    </div>
-  </div>
-</Base>
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${to}`} />
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={new URL(to, Astro.site).href} />
+    <title>Media West</title>
+  </head>
+  <body><a href={to}>{to}</a></body>
+</html>

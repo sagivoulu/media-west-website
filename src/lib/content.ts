@@ -22,7 +22,8 @@ export const banners: (Bi & { from: string; to: string; link?: string })[] = YAM
 /** Pick the text for a language, falling back to Hebrew. */
 export const t = (v: Bi | undefined, lang: Lang): string => (v ? v[lang] || v.he : '');
 
-export const PAGES = ['home', 'music', 'staff', 'gallery', 'about', 'location', 'updates'] as const;
+// Menu order: the practical pages first, then the community pages (review-group feedback, October 2026).
+export const PAGES = ['home', 'about', 'location', 'socials', 'music', 'staff', 'gallery'] as const;
 export type Page = (typeof PAGES)[number] | '404';
 
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');

@@ -10,7 +10,7 @@ nav:
   gallery: { he: "גלריה", en: "Gallery" }
   about: { he: "עלינו", en: "About" }
   location: { he: "איך מגיעים", en: "Location" }
-  updates: { he: "עדכונים", en: "Updates" }
+  socials: { he: "רשתות", en: "Socials" }
 
 common:
   classes: { he: "שיעורים", en: "Classes" }
@@ -61,6 +61,9 @@ about:
     placeholder: true
   donations: { he: "תרומות", en: "Donations" }
   donations_text: { he: "הכניסה חופשית, על בסיס תרומה.", en: "Entry is free, donation based." }
+  birthday: { he: "מעגל יום הולדת", en: "Birthday circle" }
+  birthday_text: { he: "יש יום הולדת? רוקדים לכבודך מעגל במסיבה, על השיר שבחרת. ממלאים את הטופס לפחות שבועיים מראש.", en: "Birthday coming up? We dance a circle for you at the party, to the song you choose. Fill the form at least two weeks ahead." }
+  birthday_form: { he: "לטופס מעגל יום הולדת", en: "Birthday circle form" }
   questions: { he: "שאלות", en: "Questions" }
 
 location:
@@ -70,8 +73,8 @@ location:
   contact: { he: "יצירת קשר", en: "Contact" }
   message_team: { he: "שליחת הודעה לעמוד של מדיה ווסט", en: "Message the Media West page" }
 
-updates:
-  title: { he: "עדכונים", en: "Updates" }
+socials:
+  title: { he: "רשתות", en: "Socials" }
   lead: { he: "מי מלמד, מי ה-DJ וערבי נושא - כל שבוע ברשתות שלנו.", en: "Who's teaching, who's DJ-ing and theme nights - every week on our channels." }
   whatsapp: { he: "עדכונים שקטים בווצאפ", en: "Silent WhatsApp group - updates only" }
   instagram: { he: "הסטורי השבועי ותמונות", en: "The weekly story and photos" }

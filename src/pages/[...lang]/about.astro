@@ -28,6 +28,13 @@ const donate = [
             : <span class="soon">{d.name} · {t(texts.common.soon, lang)}</span>)}
         </div>
       </section>
+      <section class="block" aria-labelledby="bd-h">
+        <h2 class="label" id="bd-h">{t(T.birthday, lang)}</h2>
+        <p>{t(T.birthday_text, lang)}</p>
+        <div class="links">
+          <a href={site.links.birthday_form} {...ext}>{t(T.birthday_form, lang)}<span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </section>
       <section class="block" aria-labelledby="q-h">
         <h2 class="label" id="q-h">{t(T.questions, lang)}</h2>
         <div>
