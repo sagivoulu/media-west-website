@@ -1,12 +1,13 @@
 /* Media West - a quiet gallery. One light typeface, thin rules, lots of space.
-   The logo is the only strong color; the palette comes from the Facebook cover mockups (light = cream, dark = midnight). */
+   The logo is the only strong color; the palette is built around its two brand colors, blue #0041BA and pink #D41479
+   (light = cream, dark = night - like the Facebook cover drafts). */
 :root {
-  --bg: #FEFBF4;        /* Cream - the wall */
-  --ink: #510032;       /* Deep Plum - text */
-  --muted: #86576F;     /* Mauve - labels, captions */
-  --rule: rgba(81, 0, 50, .16);
-  --accent: #D63C68;    /* Logo Pink - hover */
-  --orange: #C45C32;    /* Logo Orange - the one highlight */
+  --bg: #FBF7F2;        /* Cream - the wall */
+  --ink: #0E1638;       /* Deep navy - text */
+  --muted: #5E6482;     /* Slate - labels, captions */
+  --rule: rgba(14, 22, 56, .14);
+  --accent: #D41479;    /* Brand pink - hover */
+  --blue: #0041BA;      /* Brand blue - the one highlight */
   --frame: #FFFFFF;     /* picture frames */
 
   --f: "Heebo", "Helvetica Neue", Arial, system-ui, sans-serif;
@@ -20,14 +21,14 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0D0E2B; --ink: #FFFFFF; --muted: #B9A9C4; --rule: rgba(255, 191, 160, .18);
-    --accent: #FFBFA0; --orange: #F87746; --frame: #281E40;
+    --bg: #07081A; --ink: #FFFFFF; --muted: #A9AECB; --rule: rgba(169, 174, 203, .2);
+    --accent: #FF5FB0; --blue: #6FA0FF; --frame: #15172E;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0D0E2B; --ink: #FFFFFF; --muted: #B9A9C4; --rule: rgba(255, 191, 160, .18);
-  --accent: #FFBFA0; --orange: #F87746; --frame: #281E40;
+  --bg: #07081A; --ink: #FFFFFF; --muted: #A9AECB; --rule: rgba(169, 174, 203, .2);
+    --accent: #FF5FB0; --blue: #6FA0FF; --frame: #15172E;
   color-scheme: dark;
 }
 
@@ -95,7 +96,7 @@ footer { padding-block: 24px 40px; font-size: .8125rem; color: var(--muted); }
 
 /* home: the logo hangs alone with its wall text */
 .home { display: grid; justify-items: center; gap: 48px; padding-block: 8vh 9vh; text-align: center; }
-.home .logo { width: min(62vw, 400px); }
+.home .logo { width: min(58vw, 300px); }
 .home .logo svg { width: 100%; height: auto; display: block; }
 .wall { display: grid; gap: 10px; justify-items: center; }
 .wall .l1 { font-size: var(--t-lead); }
@@ -104,7 +105,7 @@ footer { padding-block: 24px 40px; font-size: .8125rem; color: var(--muted); }
 .dot { color: var(--muted); padding-inline: .35em; }
 .nw { white-space: nowrap; }
 .banners { display: grid; gap: 8px; justify-items: center; }
-.banner { font-size: var(--t-lead); padding: 10px 18px; border-block: 1px solid var(--orange); }
+.banner { font-size: var(--t-lead); padding: 10px 18px; border-block: 1px solid var(--blue); }
 
 /* listing rows */
 .rows { display: grid; }
@@ -135,7 +136,7 @@ a.row:hover .v, a.row:hover .x { color: var(--accent); }
 .gal { columns: 2 220px; column-gap: 28px; }
 .piece { break-inside: avoid; margin: 0 0 36px; display: grid; gap: 10px; }
 .canvas { width: 100%; border: 10px solid var(--frame); outline: 1px solid var(--rule); box-shadow: 0 18px 30px -24px rgba(13, 14, 43, .5); background: var(--frame); }
-div.canvas { aspect-ratio: 4 / 3; background: linear-gradient(150deg, color-mix(in srgb, var(--orange) 22%, var(--frame)), color-mix(in srgb, var(--accent) 22%, var(--frame))); }
+div.canvas { aspect-ratio: 4 / 3; background: linear-gradient(150deg, color-mix(in srgb, var(--blue) 22%, var(--frame)), color-mix(in srgb, var(--accent) 22%, var(--frame))); }
 .piece:nth-child(3n+2) div.canvas { aspect-ratio: 3 / 4; }
 .caption { font-size: .875rem; color: var(--muted); line-height: 1.5; }
 
