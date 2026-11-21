@@ -1,7 +1,7 @@
 ---
 // Home: the essence of Media West (the Facebook cover text) and nothing else.
 import Base from '../../layouts/Base.astro';
-import wordmark from '../../assets/wordmark.svg?raw';
+import logo from '../../assets/logo.svg?raw';
 import { site, texts, banners, t, langPaths, langOf, todayIL } from '../../lib/content';
 
 export const getStaticPaths = langPaths;
@@ -12,7 +12,7 @@ const addr = lang === 'he' ? site.address.he : site.address.short_en;
 ---
 <Base lang={lang} page="home">
   <div class="page home">
-    <div class="logo" role="img" aria-label="Media West" set:html={wordmark} />
+    <div class="logo" role="img" aria-label="Media West" set:html={logo} />
     {activeBanners.length > 0 && (
       <div class="banners">
         {activeBanners.map((b) => (

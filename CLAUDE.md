@@ -72,7 +72,7 @@ Conventions:
 
 ## Design
 
-The full spec is in `docs/design.md`. In short: a quiet art-gallery look - one light typeface (Heebo), thin rules, lots of space, the logo hung alone on Home like an artwork. Light theme = cream, dark theme = midnight (from the Media West palette). **The logo's colors never change** (`src/assets/wordmark.svg`, `public/favicon.svg`).
+The full spec is in `docs/design.md`. In short: a quiet art-gallery look - one light typeface (Heebo), thin rules, lots of space, the logo hung alone on Home like an artwork. Light theme = cream, dark theme = night, built around the brand colors blue `#0041BA` and pink `#D41479`. **The logo is used exactly as drawn and its colors never change** (`src/assets/logo.svg`, `public/favicon.svg`, `public/images/logo-round.png`).
 
 ## Working in this repo
 

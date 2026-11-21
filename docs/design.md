@@ -13,17 +13,29 @@ A small, quiet art gallery. The site should feel calm and confident, and it shou
 
 Defined as CSS variables in `src/styles/global.css`. The site follows the visitor's system theme; the "Dark/Light" switch overrides it and is remembered.
 
-| Token | Light (cream) | Dark (midnight) | Use |
+| Token | Light (cream) | Dark (night) | Use |
 |---|---|---|---|
-| `--bg` | `#FEFBF4` cream | `#0D0E2B` midnight | the wall |
-| `--ink` | `#510032` deep plum | `#FFFFFF` | text |
-| `--muted` | `#86576F` mauve | `#B9A9C4` | labels, captions, secondary text |
-| `--rule` | plum 16% | peach 18% | thin lines |
-| `--accent` | `#D63C68` logo pink | `#FFBFA0` peach glow | hover |
-| `--orange` | `#C45C32` logo orange | `#F87746` neon orange | the rule under a banner - the only color besides the logo |
-| `--frame` | `#FFFFFF` | `#281E40` indigo | picture frames |
+| `--bg` | `#FBF7F2` cream | `#07081A` night | the wall |
+| `--ink` | `#0E1638` deep navy | `#FFFFFF` | text |
+| `--muted` | `#5E6482` slate | `#A9AECB` | labels, captions, secondary text |
+| `--rule` | navy 14% | slate 20% | thin lines |
+| `--accent` | `#D41479` brand pink | `#FF5FB0` light pink | hover |
+| `--blue` | `#0041BA` brand blue | `#6FA0FF` light blue | the rule under a banner - the only color besides the logo |
+| `--frame` | `#FFFFFF` | `#15172E` | picture frames |
 
-The logo keeps its own colors in both themes (orange `#C45C32` → pink `#D63C68`), with no glow or other effect (a dark-mode glow was removed after feedback: it looked blurry).
+The palette is built around the brand colors of the logo (since November 2026): blue `#0041BA` and pink `#D41479`. The dark theme is the night look of the Facebook cover drafts.
+
+## Logo
+
+The final Media West logo (17.11.2026), exactly as drawn, never redrawn or recolored. The files come from the internal repo's brand assets.
+
+| Where | File |
+|---|---|
+| Home | `src/assets/logo.svg` - the full logo (monogram over "media west") |
+| Favicon | `public/favicon.svg` - the monogram |
+| Link previews (`og:image`) | `public/images/logo-round.png` - the round profile icon |
+
+The logo keeps its own colors in both themes, with no glow or other effect (a dark-mode glow was removed after feedback: it looked blurry).
 
 ## Type
 
